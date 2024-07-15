@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --fonte-principal: "Montserrat", sans-serif;
+    --cor-textoPrincipal: #464646;
+    --cor-textoSecundario: #A3A3A3;
+    --fundo-principal: #f9f7fe;
+    --cor-botaoChamada: #FFB050;
+    --cor-botaoEndereço: #4894FF;
+}
+
+* {
+    font-family: var(--fonte-principal);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--fundo-principal);
+}
+
+.cabecalho {
+    display: flex;
+    margin: 3em 0 3em 1em;
+    background-color: var(--fundo-principal);
+}
+
+.cabecalho__container {
+    margin-left: 1em;
+}
+
+.container__titulo {
+    color: var(--cor-textoPrincipal);
+}
+
+.container__texto {
+    color: var(--cor-textoSecundario);
+}
+
+.conteudoTitulo {
+    color: var(--cor-textoPrincipal);
+    margin: 1em 0 0 1em;
+}
+
+.container__paciente {
+    position: relative;
+    display: flex;
+    width: 90%;
+    margin: 1em auto 0em;
+    padding: 1em;
+    border-radius: 10px 10px 0 0;
+    background-color: white;
+}
+
+.container__paciente-foto {
+    width: 40px;
+    margin-right: 1em;
+}
+
+.container__paciente-titulo {
+    color: var(--cor-textoPrincipal);
+    margin-bottom: .1em;
+}
+
+.container__paciente-consulta {
+    display: flex;
+}
+
+.paciente__consulta-camera {
+    margin-right: .5em;
+}
+
+.paciente__consulta-texto {
+    color: var(--cor-textoSecundario);
+}
+
+.container__paciente-botao {
+    background-color: var(--fundo-principal);
+    border-radius: 50%;
+    padding: .8em;
+    position: absolute;
+    right: 10px;
+    display: flex;
+}
+
+.container__linha {
+    border: none;
+    border-top: 1px solid #ccc; 
+    width: 90%;
+    margin: auto;
+}
+
+.container__remoto {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    padding: 1em;
+    border-radius: 0 0 10px 10px;
+    background-color: white;
+}
+
+.container__remoto > p {
+    color: var(--cor-textoPrincipal);
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: .2em;
+}
+
+.botao__video {
+    background-color: var(--cor-botaoChamada);
+    border: none;
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+    margin-top: 1em;
+    font-size: 15px;
+}
+
+.botao__audio {
+    background-color: white;
+    border: 1px solid var(--cor-textoSecundario);
+    color: var(--cor-textoPrincipal);
+    padding: 1em;
+    border-radius: 10px;
+    font-size: 15px;
+    margin-left: 1.5em;
+}
+
+.container__presencial {
+    background-color: white;
+    width: 90%;
+    margin: auto;
+    padding: 1em;
+    border-radius: 0 0 10px 10px;
+    background-color: white;
+}
+
+.botao__endereço {
+    background-color: var(--cor-botaoEndereço);
+    border: none;
+    color: white;
+    padding: 1em;
+    border-radius: 10px;
+    margin-top: 1em;
+    font-size: 15px;
+    width: 82vw;
+}
+
+.rodape {
+    display: flex;
+    padding: 1em;
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    gap: 20px;
+}
+
+.rodape-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.rodape_link {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    color: var(--cor-textoSecundario);
+    text-decoration: none;
+}
+
+.rodape_link .rodape_icone {
+    filter: grayscale(100%);
+    transition: filter 0.3s, color 0.3s;
+}
+
+.rodape_link.active {
+    color: var(--cor-botaoEndereço);
+}
+
+.rodape_link.active .rodape_icone {
+    filter: none;
+}
+
+.rodape_icone {
+    margin-bottom: 5px;
+}

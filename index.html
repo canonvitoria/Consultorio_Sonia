@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Consultório Sônia</title>
+    <link rel="shortcut icon" href="img/assistencia-medica.png" type="image/x-icon">
+</head>
+<body>
+    <header class="cabecalho">
+        <img src="img/doutora.png" alt="Imagem da Doutora Sônia">
+
+        <div class="cabecalho__container">
+            <h1 class="container__titulo">Olá, Sônia</h1>
+            <p class="container__texto">Mais 4 consultas hoje</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="conteudoPrincipal">
+            <h2 class="conteudoTitulo">Hoje</h2>
+
+            <div class="container__paciente">
+                <img class="container__paciente-foto" src="img/pacienteUm.png" alt="Paciente Luciana">
+
+                <div class="container__paciente-perfil">
+                    <h3 class="container__paciente-titulo">Luciana Dias</h3>
+
+                    <div class="container__paciente-consulta">
+                        <img class="paciente__consulta-camera" src="img/Camera.svg" alt="Icone de camera VideoChamada">
+                        <p class="paciente__consulta-texto">Consulta remota</p>
+                    </div>
+                    
+                </div>
+
+                <div class="container__paciente-botao">
+                    <img src="img/chat1.svg" alt="Icone de conversa">
+                </div>
+            </div>      
+
+            <hr class="container__linha">
+
+            <div class="container__remoto">
+                <p>14:00 - 15:00 (1 hora)</p>
+
+                <button class="botao__video">Ligar por vídeo</button>
+                <button class="botao__audio">Ligar por áudio</button>
+            </div>
+
+            <div class="container__paciente">
+                <img class="container__paciente-foto" src="img/pacienteDois.png" alt="Paciente Luciana">
+
+                <div class="container__paciente-perfil">
+                    <h3 class="container__paciente-titulo">Larissa Santana</h3>
+
+                    <div class="container__paciente-consulta">
+                        <img class="paciente__consulta-camera" src="img/Camera.svg" alt="Icone de camera VideoChamada">
+                        <p class="paciente__consulta-texto">Consulta no local</p>
+                    </div>
+                    
+                </div>
+
+                <div class="container__paciente-botao">
+                    <img src="img/chat1.svg" alt="Icone de conversa">
+                </div>
+            </div>      
+            <hr class="container__linha">
+
+            <div class="container__presencial">
+                <p>16:00 - 17:00 (1 hora)</p>
+                <button class="botao__endereço">Ver endereço</button>
+            </div>
+
+            <div class="container__paciente">
+                <img class="container__paciente-foto" src="img/pacienteTres.png" alt="Paciente Luciana">
+
+                <div class="container__paciente-perfil">
+                    <h3 class="container__paciente-titulo">Marcos Correia</h3>
+
+                    <div class="container__paciente-consulta">
+                        <img class="paciente__consulta-camera" src="img/Camera.svg" alt="Icone de camera VideoChamada">
+                        <p class="paciente__consulta-texto">Consulta remota</p>
+                    </div>
+                    
+                </div>
+
+                <div class="container__paciente-botao">
+                    <img src="img/chat1.svg" alt="Icone de conversa">
+                </div>
+            </div>  
+            <hr class="container__linha">
+
+            <div class="container__remoto">
+                <p>17:20 - 18:00 (40 minutos)</p>
+
+                <button class="botao__video">Ligar por vídeo</button>
+                <button class="botao__audio">Ligar por áudio</button>
+            </div>
+
+            <h2 class="conteudoTitulo">Amanhã</h2>
+
+            <div class="container__paciente">
+                <img class="container__paciente-foto" src="img/pacienteQuatro.png" alt="Paciente Luciana">
+
+                <div class="container__paciente-perfil">
+                    <h3 class="container__paciente-titulo">Clara Lemos</h3>
+
+                    <div class="container__paciente-consulta">
+                        <img class="paciente__consulta-camera" src="img/Camera.svg" alt="Icone de camera VideoChamada">
+                        <p class="paciente__consulta-texto">Consulta no local</p>
+                    </div>
+                    
+                </div>
+
+                <div class="container__paciente-botao">
+                    <img src="img/chat1.svg" alt="Icone de conversa">
+                </div>
+            </div>      
+            <hr class="container__linha">
+
+            <div class="container__presencial">
+                <p>18:00 - 19:00 (1 hora)</p>
+                <button class="botao__endereço">Ver endereço</button>
+            </div>    
+        </section>
+    </main>
+    <footer class="rodape">
+        <div class="rodape-container">
+            <a href="#" class="rodape_link" onclick="highlightLink(this)">
+                <img src="img/Calendarioicone.svg" alt="ícone de calendário" class="rodape_icone">
+                <span>Consultas</span> 
+            </a>           
+        </div>
+    
+        <div class="rodape-container">
+            <a href="#" class="rodape_link" onclick="highlightLink(this)">
+                <img src="img/clientes icone.svg" alt="ícone de clientes" class="rodape_icone">
+                <span>Clientes</span>
+            </a>
+        </div>
+    
+        <div class="rodape-container">
+            <a href="#" class="rodape_link" onclick="highlightLink(this)">
+                <img src="img/relatorios icone.svg" alt="ícone de Relatórios" class="rodape_icone">
+                <span>Relatórios</span>
+            </a>
+        </div>
+    
+        <div class="rodape-container">
+            <a href="#" class="rodape_link" onclick="highlightLink(this)">
+                <img src="img/menu icone.svg" alt="ícone de Menu" class="rodape_icone">
+                <span>Menu</span>
+            </a>
+        </div>
+    </footer>
+    <script src="terminal.js"></script>
+</body>
+</html>
