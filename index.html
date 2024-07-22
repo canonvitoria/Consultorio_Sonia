@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="img/assistencia-medica.png" type="image/x-icon">
 </head>
 <body>
+    <div id="overlay"></div>
+
     <header class="cabecalho">
         <img src="img/doutora.png" alt="Imagem da Doutora Sônia">
 
@@ -154,6 +156,21 @@
             </a>
         </div>
     </footer>
+    <div class="floating-button-container">
+        <button class="floating-button" id="mainButton">
+            <img src="img/maisicone.svg" alt="Adicionar">
+        </button>
+        <div class="floating-menu" id="floatingMenu">
+            <button class="floating-menu-item">
+                <img src="img/pinfabiconee.svg" alt="Local">
+                <span>Nova consulta na casa do paciente</span>
+            </button>
+            <button class="floating-menu-item">
+                <img src="img/Camerafab.svg" alt="Vídeo">
+                <span>Nova consulta por vídeo</span>
+            </button>
+        </div>
+    </div>
     <script src="terminal.js"></script>
 </body>
 </html>
