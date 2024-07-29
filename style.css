@@ -268,3 +268,42 @@ body, html {
     white-space: nowrap;
     font-size: 15px;
 }
+
+@media screen and (min-width: 1024px) {
+    body {
+        width: 98vw;
+    }
+
+    .cabecalho {
+        margin-left: 2em;
+    }
+
+    .conteudoTitulo {
+        margin-left: 2.5em;
+    }
+
+    .container__paciente, .container__remoto, .container__linha, .container__presencial{
+        width: 400px;
+    }
+
+    .botao__endereço {
+        width: 370px;
+    }
+
+    .container__conteudo{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-bottom: 5em;
+    }
+
+
+    .rodape-container {
+        width: 232px;
+    }
+
+    .card__paciente{
+        width: 400px;
+        margin-left: 8em;
+    }
+}
