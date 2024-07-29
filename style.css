@@ -297,13 +297,22 @@ body, html {
         padding-bottom: 5em;
     }
 
-
     .rodape-container {
-        width: 232px;
+        width: 23vw;
     }
 
     .card__paciente{
         width: 400px;
         margin-left: 8em;
+    }
+
+    .container__botao {
+        display: flex;
+        justify-content: center;
+    }
+
+    .botao__audio {
+        height: 50px;
+        margin-top: 1em;
     }
 }
