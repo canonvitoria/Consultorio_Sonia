@@ -316,3 +316,21 @@ body, html {
         margin-top: 1em;
     }
 }
+
+@media screen and (min-width: 1728px) {
+
+    body, html {
+        width: 100vw;
+        overflow-x: hidden;
+    }
+
+    .container__conteudo {
+        display: flex;
+        justify-content: center;
+        gap: 80px;
+    }
+
+    .rodape {
+        width: 99vw;
+    }
+}
