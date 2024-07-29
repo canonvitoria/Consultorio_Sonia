@@ -279,7 +279,7 @@ body, html {
     }
 
     .conteudoTitulo {
-        margin-left: 2.5em;
+        margin-left: 2em;
     }
 
     .container__paciente, .container__remoto, .container__linha, .container__presencial{
@@ -303,7 +303,7 @@ body, html {
 
     .card__paciente{
         width: 400px;
-        margin-left: 8em;
+        margin-left: 5em;
     }
 
     .container__botao {
