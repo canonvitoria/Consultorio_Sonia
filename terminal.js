@@ -24,4 +24,13 @@ document.getElementById('overlay').addEventListener('click', function() {
     this.style.display = 'none';
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const toggleMenu = document.getElementById('toggleMenu');
+    const menuLateral = document.getElementById('menuLateral');
+
+    toggleMenu.addEventListener('click', function() {
+        menuLateral.classList.toggle('fechado');
+    });
+});
+
 

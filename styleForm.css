@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --fonte-principal: "Montserrat", sans-serif;
+    --cor-textoPrincipal: #464646;
+    --cor-textoSecundario: #A3A3A3;
+    --fundo-principal: #f9f7fe;
+    --cor-botaoChamada: #FFB050;
+    --cor-botaoEndereço: #4894FF;
+    --cor-menu-lateral: #fff;
+    --cor-menu-lateral-texto: #464646;
+    --cor-menu-lateral-link-hover: #FFB050;
+    --largura-menu: 250px;
+    --largura-menu-fechado: 60px;
+    --duracao-transicao: 0.3s;
+}
+
+* {
+    font-family: var(--fonte-principal);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--fundo-principal);
+    transition: background-color 0.3s ease;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container-apresentacao {
+    background-color: #4894FF;
+    width: 40vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.container_formulario {
+    width: 50vw;
+    height: 100vh;  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tituloPrincipal {
+    color: var(--cor-menu-lateral);
+    margin: 0 auto;
+}
+
+.container_paragrafo {
+    color: var(--cor-menu-lateral);
+    margin: 0 auto;
+}
+
+.img_form-person {
+    width: 100px;
+    margin: 1em auto;
+}
+
+.formulario_conteudo {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    gap: 2em;
+}
+
+.formulario_inputs {
+    font-size: 1.3em;
+}
+
+.input_nomeCompleto {
+    border-radius: 8px;
+    border: none;
+    background-color: var(--cor-botaoChamada);
+    padding-left: 10px;
+    font-size: .8em;
+}
+
+.input_consulta{
+    border-radius: 8px;
+    font-size: .8em;
+}
+
+.input_dataConsulta, .input_horaConsulta  {
+    border-radius: 8px;
+    border: 1px solid rgb(134, 132, 132);
+    font-size: .8em;
+}
+
+.formulario_inputs-obs {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    font-size: 1.3em;
+}
+
+.input_obs {
+    height: 150px;
+}
+
+button {
+    width: 100px;
+    margin: auto;
+    background-color: var(--cor-botaoEndereço);
+    border: none;
+    padding: 1em ;
+    border-radius: 5px;
+    color: var(--cor-menu-lateral);
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #67a5fc;
+    cursor: pointer;
+}
+ 

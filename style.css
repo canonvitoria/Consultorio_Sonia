@@ -7,6 +7,12 @@
     --fundo-principal: #f9f7fe;
     --cor-botaoChamada: #FFB050;
     --cor-botaoEndereço: #4894FF;
+    --cor-menu-lateral: #fff;
+    --cor-menu-lateral-texto: #464646;
+    --cor-menu-lateral-link-hover: #FFB050;
+    --largura-menu: 250px;
+    --largura-menu-fechado: 60px;
+    --duracao-transicao: 0.3s;
 }
 
 * {
@@ -21,6 +27,7 @@ body, html {
     height: 100vh;
     background-color: var(--fundo-principal);
     transition: background-color 0.3s ease;
+    overflow-x: hidden;
 }
 
 #overlay {
@@ -269,68 +276,204 @@ body, html {
     font-size: 15px;
 }
 
-@media screen and (min-width: 1024px) {
-    body {
-        width: 98vw;
+.menu-lateral {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: var(--largura-menu);
+    height: 100vh;
+    background-color: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    transition: width var(--duracao-transicao);
+    z-index: 1000;
+}
+
+.menu-lateral.fechado {
+    width: var(--largura-menu-fechado);
+}
+
+.toggle-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    cursor: pointer;
+    background-color: #f4f4f4;
+}
+
+.toggle-menu img {
+    width: 20px;
+    transition: transform var(--duracao-transicao);
+}
+
+.menu-lateral.fechado .toggle-menu img {
+    transform: rotate(180deg);
+}
+
+.menu-lateral__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em 0;
+}
+
+.menu-lateral__link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor-textoSecundario);
+    width: 100%;
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.menu-lateral__link:hover {
+    background-color: #f0f0f0;
+}
+
+.menu-lateral__icone {
+    width: 24px;
+    margin-right: 1em;
+}
+
+.menu-lateral__texto {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.menu-lateral.fechado .menu-lateral__texto {
+    display: none;
+}
+
+.container__principal {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.conteudo {
+    flex: 1;
+    padding: 1em;
+    transition: margin-left var(--duracao-transicao);
+}
+
+.menu-lateral.aberto + .conteudo {
+    margin-left: var(--largura-menu);
+}
+
+.menu-lateral.fechado + .conteudo {
+    margin-left: var(--largura-menu-fechado);
+}
+
+.icone__menu-lateral {
+    margin: 10px;
+}
+
+@media (max-width: 599px) {
+    .menu-lateral {
+        display: none;
     }
 
-    .cabecalho {
-        margin-left: 2em;
-    }
-
-    .conteudoTitulo {
-        margin-left: 2em;
-    }
-
-    .container__paciente, .container__remoto, .container__linha, .container__presencial{
-        width: 400px;
-    }
-
-    .botao__endereço {
-        width: 370px;
-    }
-
-    .container__conteudo{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        padding-bottom: 5em;
-    }
-
-    .rodape-container {
-        width: 23vw;
-    }
-
-    .card__paciente{
-        width: 400px;
-        margin-left: 5em;
-    }
-
-    .container__botao {
-        display: flex;
-        justify-content: center;
-    }
-
-    .botao__audio {
-        height: 50px;
-        margin-top: 1em;
+    #overlay {
+        display: none;
     }
 }
 
-@media screen and (min-width: 1728px) {
-
-    body, html {
-        width: 100vw;
-        overflow-x: hidden;
+@media (min-width: 600px) {
+    .menu-lateral {
+        display: flex;
+    }
+    .rodape {
+        display: none;
+    }
+    .container__paciente, .container__linha {
+        width: 60%;
     }
 
-    .container__conteudo {
-        display: flex;
-        justify-content: center;
-        gap: 80px;
+    .botao__endereço {
+        width: 60%;
+    }
+
+    .container__remoto,
+    .container__presencial {
+        width: 60%;
+    }
+
+}
+
+@media (min-width: 600px) {
+    .cabecalho {
+        align-items: center;
+        margin: 2em;
+        padding-left: 3em;
+    }
+
+    .conteudoTitulo {
+        padding-left: 3em;
+    }
+}
+
+@media (min-width: 768px) {
+    .cabecalho {
+        margin: 2em;
+    }
+}
+
+@media (min-width: 992px) {
+    .container__paciente, .container__linha {
+        width: 50%;
+    }
+
+    .botao__endereço {
+        width: 50%;
+    
+    }
+
+    .container__remoto,
+    .container__presencial {
+        width: 50%;
     }
 
     .rodape {
-        width: 99vw;
+        display: none;
+    }
+    
+    .floating-button-container {
+        display: none;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .container__paciente, .container__linha {
+        width: 30%;
+    }
+
+    .botao__endereço {
+        width: 30%;
+    }
+
+    .container__remoto,
+    .container__presencial {
+        width: 30%;
+    }
+
+    .rodape {
+        display: none;
+    }
+    .floating-button-container {
+        display: none;
+    }
+    #fomularioIMG {
+        width: 30px;
+    }
+
+    #formulario {
+        margin-top: 40em;
+        font-weight: bold;
+        background-color: var(--cor-botaoEndereço);
+        color: white;
     }
 }

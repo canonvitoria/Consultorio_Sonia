@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+ <html lang="pt-br">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="styleForm.css">
+    <link rel="shortcut icon" href="img/assistencia-medica.png" type="image/x-icon">
+
+ </head>
+ <body>
+    <main>
+        <div class="container-apresentacao">
+            <h1 class="tituloPrincipal">Bem-vindo ao formulário de cadastro</h1>
+            <p class="container_paragrafo">Por favor, insira no formulário abaixo suas informações</p>
+            <img src="img/clientes icone copy.svg" alt="icone de clientes" class="img_form-person">
+        </div>
+        
+        <div class="container_formulario">
+            <div class="formulario_conteudo">
+                <div class="formulario_inputs">
+                    <label for="nomeComplerto" >Nome Completo:</label>
+                    <input type="text" name="nomeCompleto" id="nomeCompleto" class="input_nomeCompleto">
+                </div>
+                
+                <div class="formulario_inputs">
+                    <label for="tipoConsulta">Tipo da Consulta:</label>
+                    <select name="tipoConsulta" class="input_consulta">
+                        <option value="vazio" selected>Escolha</option>
+                        <option value="remota">Consulta Remota</option>
+                        <option value="presencial">Consulta no local</option>
+                    </select>
+                </div>
+                
+                <div class="formulario_inputs">
+                    <label for="dataConsulta">Data da Consulta:</label>
+                    <input type="date" id="data" name="data" class="input_dataConsulta" />
+                </div>
+                
+                <div class="formulario_inputs">
+                    <label for="dataConsulta">Horário da Consulta:</label>
+                    <input type="time" id="hora" name="hora"class="input_horaConsulta" />
+                </div>
+                
+                <div class="formulario_inputs-obs">
+                    <label for="obs">Observações:</label>
+                    <textarea name="obs" id="Iobs" class="input_obs" ></textarea>
+                </div>
+
+                <button type="submit">Enviar</button>
+            </div>
+        </div>
+
+    </main>
+ </body>
+ </html>
