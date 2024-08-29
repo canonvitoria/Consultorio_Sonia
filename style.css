@@ -413,12 +413,25 @@ body, html {
     .conteudoTitulo {
         padding-left: 3em;
     }
+
+    #fomularioIMG {
+        width: 30px;
+    }
+
+    #formulario {
+        margin-top: 30em;
+        font-weight: bold;
+        background-color: var(--cor-botaoEndereço);
+        color: white;
+    }
 }
 
 @media (min-width: 768px) {
     .cabecalho {
         margin: 2em;
     }
+
+    
 }
 
 @media (min-width: 992px) {
@@ -443,6 +456,7 @@ body, html {
     .floating-button-container {
         display: none;
     }
+    
 }
 
 

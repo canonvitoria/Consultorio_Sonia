@@ -42,7 +42,6 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    
 }
 
 .container_formulario {
@@ -125,3 +124,53 @@ button:hover {
     cursor: pointer;
 }
  
+
+@media (min-width: 600px) { 
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+    .container-apresentacao {
+        background-color: #4894FF;
+        width: 100vw;
+        height: 20vh;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .container_formulario {
+        width: 100vw;
+        height: 80vh;  
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .tituloPrincipal {
+        color: var(--cor-menu-lateral);
+        margin: 0 auto;
+        font-size: 25px;
+    }
+    
+    .container_paragrafo {
+        color: var(--cor-menu-lateral);
+        margin: 0 auto;
+    }
+    
+    .img_form-person {
+        width: 50px;
+        margin: 1em auto;
+    }
+    .formulario_conteudo {
+        display: flex;
+       
+        align-items: center;
+    }
+    .formulario_inputs-obs {
+        text-align: center;
+    }
+    .input_obs {
+        width: 400px;
+        height: 100px;
+    }
+    
+}
